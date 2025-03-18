@@ -1,12 +1,57 @@
-# React + Vite
+# CellaML
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CellaML is a web application that visualizes the Game of Life using React and D3. The application allows users to iterate through generations of the Game of Life grid.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Visualize the Game of Life grid
+- Iterate through generations with a button click
+- Uses React for the UI and D3 for rendering the grid
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/cellaml.git
+    cd cellaml
+    ```
+
+2. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+## Usage
+
+1. Start the development server:
+    ```sh
+    npm start
+    ```
+
+2. Open your browser and navigate to `http://localhost:3000`.
+
+## Components
+
+### `App.jsx`
+
+The main component that renders the `GameOfLifeGrid` component and includes a button to iterate through generations.
+
+### `GameOfLifeGrid.jsx`
+
+A component that fetches the grid data from the server and renders it using D3.
+
+## API
+
+The application communicates with a backend server to fetch the next generation of the grid. The server should expose an endpoint at `http://127.0.0.1:8000/iterate` that accepts a POST request with the current grid state and returns the next generation.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
